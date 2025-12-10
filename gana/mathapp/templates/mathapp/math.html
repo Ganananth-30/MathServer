@@ -1,0 +1,62 @@
+<html>
+<head>
+    <title>Mileage Calculator</title>
+    <style>
+        body 
+        {
+            background: linear-gradient(lime,yellow);
+        }
+        .id1 
+        {
+            text-align: center;
+            color: brown;
+             
+        }
+        .box 
+        {
+            text-align: center;
+            width: 30%;
+            background-color:cyan;
+            border: solid 8px gold;
+            padding: 50px;
+            margin: 90px auto;
+        }
+        .result 
+        {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+        h4
+        {
+        text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        
+        <form method="post">
+        <h1 class="id1">The Mileage Calculator</h1>
+
+            {% csrf_token %}<br>
+
+            <label>Distance Travelled </label>
+            <input type="number" name="distance">(km)<br><br>
+
+            <label>Liters Consumed</label>
+            <input type="number" name="liters">(L)<br><br>
+
+            <button type="submit">Calculate</button>
+            <br>
+            <br>
+             <label>Mileage</label>            
+            <input class='result' type="number" name="Mileage" value={{miles}}>Km/L
+            <br>
+            <br>
+            <h4> GANANANTH.H  (25010984)</h4>
+
+        </form>
+    </div>
+
+</body>
+</html>
